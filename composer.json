@@ -2,14 +2,14 @@
   "version": "1.0.0",
   "name": "dbeurive/graph",
   "description": "This package contains the implementation of various graphs' algorithms",
-  "license": "Creative Commons Attribution 3.0 Unported License",
+  "license": "Common Attribution-NonCommercial 4.0 International license",
   "authors": [
     {
       "name": "Denis BEURIVE",
       "email": "denis.beurive@gmail.com"
     }
   ],
-  "keywords": ["graph", "algorithm"],
+  "keywords": ["graph", "algorithm", "Tarjan", "Dijkstra", "Breadth First Search", "Depth First Search"],
   "autoload": {
     "psr-4": {
       "dbeurive\\Graph\\": "src",
