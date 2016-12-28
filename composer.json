@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "dbeurive/graph",
   "description": "This package contains the implementation of various graphs' algorithms",
   "license": "Common Attribution-NonCommercial 4.0 International license",
