@@ -1,0 +1,7 @@
+vertex1
+vertex2 vertex1:1 vertex4:7
+vertex5 vertex1:2
+vertex6 vertex5:3
+vertex7 vertex5:4
+vertex3 vertex2:5
+vertex4 vertex3:6

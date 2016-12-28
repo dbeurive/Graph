@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "name": "dbeurive/graph",
+  "description": "This package contains the implementation of various graphs' algorithms",
+  "license": "Creative Commons Attribution 3.0 Unported License",
+  "authors": [
+    {
+      "name": "Denis BEURIVE",
+      "email": "denis.beurive@gmail.com"
+    }
+  ],
+  "keywords": ["graph", "algorithm"],
+  "autoload": {
+    "psr-4": {
+      "dbeurive\\Graph\\": "src",
+      "dbeurive\\GraphTests\\": "tests"
+    }
+  },
+  "archive": {
+    "exclude": []
+  }
+}

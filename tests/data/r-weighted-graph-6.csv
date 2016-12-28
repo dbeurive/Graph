@@ -1,0 +1,5 @@
+# Test: the default configuration.
+e1+%7C e2+%7C:1 e3+%7C:2 e4+%7C:3
+
+e2 e5:4 e6:5
+e3 e7:6 e8:7

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title><![CDATA[Documentation for \dbeurive\Graph]]></title>
+    <parser>
+        <target>doc/data</target>
+    </parser>
+    <transformer>
+        <target>doc/api</target>
+    </transformer>
+    <files>
+        <directory>./src</directory>
+    </files>
+    <logging>
+        <level>warn</level>
+    </logging>
+    <transformations>
+        <template name="responsive" />
+    </transformations>
+</phpdoc>

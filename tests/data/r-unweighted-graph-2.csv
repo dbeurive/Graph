@@ -1,0 +1,5 @@
+# Test: replace the default field separator (" ") by another one (";").
+e1;e2;e3;e4
+
+e2;e5;e6
+e3;e7;e8
