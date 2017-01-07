@@ -1,32 +1,34 @@
 - [Introduction](#a0)
-- [Graphs' types](#a1)
-- [Graphs' representations](#a2)
-  * [Directed graphs](#a3)
-    + [Directed and unweighted](#a4)
-    + [Directed and weighted](#a5)
-  * [Undirected graphs](#a6)
-    + [Undirected and unweighted](#a7)
-    + [Undirected and weighted](#a8)
-- [Graphs' API](#a9)
-  * [Introduction](#a10)
-  * [Loading a graph from a CSV file](#a11)
-    + [Loading CSV with the default loader](#a12)
-    + [Loading CSV with a customized loader](#a13)
-  * [Dumping a graph into a CSV file](#a14)
-    + [Dumping into CSV with the default dumper](#a15)
-    + [Dumping into CSV with a customized dumper](#a16)
-  * [Dumping a graph into its GraphViz representation](#a17)
-- [Using the algorithms](#a18)
-  * [The "Breadth First Search" algorithm](#a19)
-    + [Synopsis](#a20)
-  * [The "Depth First Search" algorithm](#a21)
+- [License](#a1)
+- [Installation](#a2)
+- [Graphs' types](#a3)
+- [Graphs' representations](#a4)
+  * [Directed graphs](#a5)
+    + [Directed and unweighted](#a6)
+    + [Directed and weighted](#a7)
+  * [Undirected graphs](#a8)
+    + [Undirected and unweighted](#a9)
+    + [Undirected and weighted](#a10)
+- [Graphs' API](#a11)
+  * [Introduction](#a12)
+  * [Loading a graph from a CSV file](#a13)
+    + [Loading CSV with the default loader](#a14)
+    + [Loading CSV with a customized loader](#a15)
+  * [Dumping a graph into a CSV file](#a16)
+    + [Dumping into CSV with the default dumper](#a17)
+    + [Dumping into CSV with a customized dumper](#a18)
+  * [Dumping a graph into its GraphViz representation](#a19)
+- [Using the algorithms](#a20)
+  * [The "Breadth First Search" algorithm](#a21)
     + [Synopsis](#a22)
-  * [The Dijkstra's algorithm](#a23)
+  * [The "Depth First Search" algorithm](#a23)
     + [Synopsis](#a24)
-    + [Illustration](#a25)
-  * [The Tarjan's algorithm](#a26)
-    + [Synopsis](#a27)
-    + [Illustration](#a28)
+  * [The Dijkstra's algorithm](#a25)
+    + [Synopsis](#a26)
+    + [Illustration](#a27)
+  * [The Tarjan's algorithm](#a28)
+    + [Synopsis](#a29)
+    + [Illustration](#a30)
 
 
 # <a name="a0"></a>Introduction
@@ -38,7 +40,27 @@ This repository contains the implementations of various algorithms for graphs.
 * The [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm)
 * The [Tarjan's strongly connected components algorithm](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm)
 
-# <a name="a1"></a>Graphs' types
+# <a name="a1"></a>License
+
+This code is published under the following license:
+
+[Creative Common Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
+
+See the file [LICENSE.TXT](LICENSE.TXT)
+
+# <a name="a2"></a>Installation
+
+From the command line:
+
+    composer require dbeurive/graph
+
+Or, from within the file `composer.json`:
+
+    "require": {
+        "dbeurive/graph": "*"
+    }
+
+# <a name="a3"></a>Graphs' types
 
 Graphs may be:
 
@@ -54,7 +76,7 @@ A given graph may be:
 | Undirected and unweighted  | `\dbeurive\Graph\lists\UndirectedUnweighted` |
 | Undirected and weighted    | `\dbeurive\Graph\lists\UndirectedWeighted`   |
 
-# <a name="a2"></a>Graphs' representations
+# <a name="a4"></a>Graphs' representations
 
 Many formalisms may be used to represent a graph. For example:
 
@@ -68,13 +90,13 @@ Many formalisms may be used to represent a graph. For example:
 
 This PHP module uses the formalism known as "Adjacency lists".
 
-## <a name="a3"></a>Directed graphs
+## <a name="a5"></a>Directed graphs
 
 Vertices have __successors__ (and __predecessors__).
 
 We can choose to describe the graph through its lists of successors or through its lists of predecessors.
 
-### <a name="a4"></a>Directed and unweighted
+### <a name="a6"></a>Directed and unweighted
 
 Let's consider the following directed unweighted graph:
 
@@ -106,7 +128,7 @@ Or by a CSV file:
 
 See [this example](examples/directed-unweighted-in-memory.php).
 
-### <a name="a5"></a>Directed and weighted
+### <a name="a7"></a>Directed and weighted
 
 Let's consider the following directed weighted graph:
 
@@ -142,11 +164,11 @@ Or by a CSV file:
 
 See [this example](examples/directed-weighted-in-memory.php).
 
-## <a name="a6"></a>Undirected graphs
+## <a name="a8"></a>Undirected graphs
 
 Vertices have __neighbours__.
 
-### <a name="a7"></a>Undirected and unweighted
+### <a name="a9"></a>Undirected and unweighted
 
 Let's consider the following undirected unweighted graph:
 
@@ -177,7 +199,7 @@ Or by the CV file:
 
 See [this example](examples/undirected-unweighted-in-memory.php).
 
-### <a name="a8"></a>Undirected and weighted
+### <a name="a10"></a>Undirected and weighted
 
 Let's consider the following undirected weighted graph:
 
@@ -212,9 +234,9 @@ Or by the CSV file:
 
 See [this example](examples/undirected-weighted-in-memory.php).
 
-# <a name="a9"></a>Graphs' API
+# <a name="a11"></a>Graphs' API
 
-## <a name="a10"></a>Introduction
+## <a name="a12"></a>Introduction
 
 The graph's API allows the following actions:
 
@@ -230,9 +252,9 @@ Instead of presenting an-in depth description of the API, we will show examples 
 > Just go to the root directory of this package and issue the following command: `phpdoc`.
 > The documentation will be generated within the directory `doc/api`.
 
-## <a name="a11"></a>Loading a graph from a CSV file
+## <a name="a13"></a>Loading a graph from a CSV file
 
-### <a name="a12"></a>Loading CSV with the default loader
+### <a name="a14"></a>Loading CSV with the default loader
 
 Synopsis:
 
@@ -279,7 +301,7 @@ See example [from-csv-undirected-unweighted.php](examples/from-csv-undirected-un
 
 See example [from-csv-undirected-weighted.php](examples/from-csv-undirected-weighted.php).
 
-### <a name="a13"></a>Loading CSV with a customized loader
+### <a name="a15"></a>Loading CSV with a customized loader
 
 Synopsis:
 
@@ -319,9 +341,9 @@ See example [from-csv-directed-unweighted-non-standard.php](examples/from-csv-di
 
 See example [from-csv-directed-weighted-non-standard.php](examples/from-csv-directed-weighted-non-standard.php).
 
-## <a name="a14"></a>Dumping a graph into a CSV file
+## <a name="a16"></a>Dumping a graph into a CSV file
 
-### <a name="a15"></a>Dumping into CSV with the default dumper
+### <a name="a17"></a>Dumping into CSV with the default dumper
 
 Synopsis:
 
@@ -343,7 +365,7 @@ See example [to-csv-undirected-unweighted.php](examples/to-csv-undirected-unweig
 
 See example [to-csv-undirected-weighted.php](examples/to-csv-undirected-weighted.php).
 
-### <a name="a16"></a>Dumping into CSV with a customized dumper
+### <a name="a18"></a>Dumping into CSV with a customized dumper
 
 Synopsis:
 
@@ -406,7 +428,7 @@ See example [to-csv-undirected-unweighted-non-standard.php](examples/to-csv-undi
 
 See example [to-csv-undirected-weighted-non-standard.php](examples/to-csv-undirected-weighted-non-standard.php).
 
-## <a name="a17"></a>Dumping a graph into its GraphViz representation
+## <a name="a19"></a>Dumping a graph into its GraphViz representation
 
 Synopsis:
 
@@ -434,13 +456,13 @@ See example [to-graphviz-undirected-unweighted.php](examples/to-graphviz-undirec
  
 See example [to-graphviz-undirected-weighted.php](examples/to-graphviz-undirected-weighted.php).
 
-# <a name="a18"></a>Using the algorithms
+# <a name="a20"></a>Using the algorithms
 
-## <a name="a19"></a>The "Breadth First Search" algorithm
+## <a name="a21"></a>The "Breadth First Search" algorithm
 
 See the description [here](https://en.wikipedia.org/wiki/Breadth-first_search).
 
-### <a name="a20"></a>Synopsis
+### <a name="a22"></a>Synopsis
 
 ```php
 $vertices = array();
@@ -484,11 +506,11 @@ See example [breadth-first-search-directed.php](examples/breadth-first-search-di
 
 See example [breadth-first-search-undirected.php](examples/breadth-first-search-undirected.php).
 
-## <a name="a21"></a>The "Depth First Search" algorithm
+## <a name="a23"></a>The "Depth First Search" algorithm
 
 See the description [here](https://en.wikipedia.org/wiki/Depth-first_search).
 
-### <a name="a22"></a>Synopsis
+### <a name="a24"></a>Synopsis
 
 ```php
 $vertices = array();
@@ -525,14 +547,14 @@ See example [depth-first-search-directed.php](examples/depth-first-search-direct
 
 See example [depth-first-search-undirected.php](examples/depth-first-search-undirected.php).
 
-## <a name="a23"></a>The Dijkstra's algorithm
+## <a name="a25"></a>The Dijkstra's algorithm
 
 See the description [here](https://en.wikipedia.org/wiki/Dijkstra's_algorithm).
 
 * This algorithm works for both directed and undirected graphs.
 * The graph must be weighted.
 
-### <a name="a24"></a>Synopsis
+### <a name="a26"></a>Synopsis
 
 ```php
 // With directed graphs
@@ -557,7 +579,7 @@ See example [dijkstra-directed.php](examples/dijkstra-directed.php).
 
 See example [dijkstra-undirected.php](examples/dijkstra-undirected.php).
 
-### <a name="a25"></a>Illustration
+### <a name="a27"></a>Illustration
 
 Given the graph below, let's find the shortest paths from the vertex "`1`" to all other vertices.
  
@@ -574,14 +596,14 @@ After running the algorithm, we get:
 
 Shortest paths are printed in red. 
 
-## <a name="a26"></a>The Tarjan's algorithm
+## <a name="a28"></a>The Tarjan's algorithm
 
 See the description [here](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
 
 * This algorithm works for both directed graphs only.
 * The graph may be weighted or not.
 
-### <a name="a27"></a>Synopsis
+### <a name="a29"></a>Synopsis
 
 ```php
 $graph = new DirectedUnweighted(); // or DirectedWeighted
@@ -596,7 +618,7 @@ $txt = $algorithm->dumpToGraphviz(); // For a nice representation of the result.
 
 See example [tarjan.php](examples/tarjan.php).
 
-### <a name="a28"></a>Illustration
+### <a name="a30"></a>Illustration
 
 Given the graph below, let's find all the cycles:
 

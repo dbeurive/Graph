@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "dbeurive/graph",
   "description": "This package contains the implementation of various graphs' algorithms",
   "license": "Common Attribution-NonCommercial 4.0 International license",
@@ -12,9 +12,16 @@
   "keywords": ["graph", "algorithm", "Tarjan", "Dijkstra", "Breadth First Search", "Depth First Search"],
   "autoload": {
     "psr-4": {
-      "dbeurive\\Graph\\": "src",
+      "dbeurive\\Graph\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "dbeurive\\GraphTests\\": "tests"
     }
+  },
+  "require-dev": {
+    "phpunit/phpunit": ">=5.5.0"
   },
   "archive": {
     "exclude": []

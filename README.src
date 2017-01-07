@@ -9,6 +9,26 @@ This repository contains the implementations of various algorithms for graphs.
 * The [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm)
 * The [Tarjan's strongly connected components algorithm](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm)
 
+# License
+
+This code is published under the following license:
+
+[Creative Common Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
+
+See the file [LICENSE.TXT](LICENSE.TXT)
+
+# Installation
+
+From the command line:
+
+    composer require dbeurive/graph
+
+Or, from within the file `composer.json`:
+
+    "require": {
+        "dbeurive/graph": "*"
+    }
+
 # Graphs' types
 
 Graphs may be:
