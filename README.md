@@ -1,7 +1,4 @@
-
-
 - [Introduction](#a0)
-- [License](#a100)
 - [Graphs' types](#a1)
 - [Graphs' representations](#a2)
   * [Directed graphs](#a3)
@@ -32,7 +29,6 @@
     + [Illustration](#a28)
 
 
-
 # <a name="a0"></a>Introduction
 
 This repository contains the implementations of various algorithms for graphs.
@@ -41,14 +37,6 @@ This repository contains the implementations of various algorithms for graphs.
 * The [depth-first search algorithm](https://en.wikipedia.org/wiki/Depth-first_search)
 * The [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm)
 * The [Tarjan's strongly connected components algorithm](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm)
-
-# <a name="a100"></a>License
-
-This code is published under the following license:
- 
-[Creative Common Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
-
-See the file [LICENSE.TXT](LICENSE.TXT)
 
 # <a name="a1"></a>Graphs' types
 
@@ -590,7 +578,7 @@ Shortest paths are printed in red.
 
 See the description [here](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
 
-* This algorithm works for directed graphs only.
+* This algorithm works for both directed graphs only.
 * The graph may be weighted or not.
 
 ### <a name="a27"></a>Synopsis
